@@ -13,6 +13,18 @@ const userSchema = new mongoose.Schema({
         type: [String],
         default: ["Employee"]
     },
+    Phone: {
+        type: String,
+        required: false
+          },
+    email: {
+        type: String,
+        required: false
+          },
+    address: {
+        type: String,
+        required: false
+        },
     active: {
         type: Boolean,
         default: true

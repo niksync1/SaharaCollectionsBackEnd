@@ -14,7 +14,7 @@ const getAllNotes = async (req, res) => {
     }
 
     // Add username to each note before sending the response 
-    // See Promise.all with map() here: https://youtu.be/4lqJBBEpjRE 
+    // See Promise.all with map() here: 
     // You could also do this with a for...of loop
     const notesWithUser = await Promise.all(notes.map(async (note) => {
         const user = await User.findById(note.user).lean().exec()
